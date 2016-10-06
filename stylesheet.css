@@ -1,0 +1,27 @@
+body {
+	margin: 0px;
+}
+p {
+	margin: 8px 0px 8px 0px;
+}
+
+#top {
+	width: 100%;
+	background-color: grey;
+	padding: 16px;
+}
+
+#title {
+	margin: auto;
+}
+
+#main {
+	width: 100%;
+	height: 128px;
+	padding: 16px;
+}
+
+.topwords {
+	display: inline-block;
+	padding-right: 32px;
+}

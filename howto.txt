@@ -1,0 +1,22 @@
+- What it does: allows you to remotely power on network devices from an intranet site
+- Prereqs: Need a basic understanding of IP, web servers and HTML/PHP, a running RPi and knowing how to use it
+two parts: web server and the code itself
+	code: I made some PHP/HTML/CSS to put on the server, that needs customization
+
+1. Prep RPi
+	[optional] create DNS entry to DNS server (usually your home router) to the wakeonlan machine
+	or use DHCP with RPi and just use hostname that way
+2. Move files over with pscp (wakelan.php and stylesheet.css)
+3. install wakeonlan software package
+4. Install apache and php
+	- sudo apt-get install apache2 apache2-utils
+	- sudo apt-get install libapache2-mod-php5 php5 php-pear php5-xcache php5-mysql php5-curl php5-gd
+5. Copy code and stylesheet to /var/www/html
+	editing ownership of php/css files
+		chown -R www-data: /var/www/html/
+6. Edit file
+	Change password to your liking, or remove it (if using password, do not re-use passwords from other places)
+	Find and enter MAC addresses and PC descriptions
+7. Enable WakeonLAN in the BIOS/UEFI of target systems
+
+- Troubleshooting with running php via command line
